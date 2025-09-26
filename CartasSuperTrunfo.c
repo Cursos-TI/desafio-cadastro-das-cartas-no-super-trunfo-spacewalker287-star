@@ -4,11 +4,16 @@ struct Carta
 
 {
     
-    char Cidade[50];
+
+    char Estado[50];
+    char Codigo[50];
+    char NomeDaCidade[50];
     int Populacao;
-    int Area;
-    float PIB;
-    float NumeroDePontosTuristicos;
+    int AreaEmkm2; //Substituir em km²
+    int PIBEmBilhoes;
+    int NumeroDePontosTuristicos;
+    float DensidadePopulacional;
+    float PIBPerCapta;
     
 };
 
@@ -17,53 +22,87 @@ struct Carta
      
     printf("\n=== Cadastro da primeira carta ===\n");
 
-    printf("Cidade: ");
-    scanf(" %s", Carta1.Cidade);
+
+    printf("Estado: ");
+    scanf(" %s", Carta1.Estado);
+
+    printf("Código: ");
+    scanf(" %s", Carta1.Codigo);
+
+    printf("Nome da Cidade: ");
+    scanf(" %[^\n]", Carta1.NomeDaCidade);
 
     printf("População: ");
     scanf(" %d", &Carta1.Populacao);
 
-    printf("Área: ");
-    scanf(" %d", &Carta1.Area);
+    printf("Área em km2: ");
+    scanf(" %d", &Carta1.AreaEmkm2);
 
-    printf("PIB: ");
-    scanf(" %f", &Carta1.PIB);
+    printf("PIB em bilhões: ");
+    scanf(" %d", &Carta1.PIBEmBilhoes);
 
     printf("Número de pontos turísticos: ");
-    scanf(" %f", &Carta1.NumeroDePontosTuristicos);
+    scanf(" %d", &Carta1.NumeroDePontosTuristicos);
+
+    printf("Densidade Populacional: ");
+    scanf(" %f", &Carta1.DensidadePopulacional);
+
+    printf("PIB Per Capta: ");
+    scanf(" %f", &Carta1.PIBPerCapta);
 
     printf("\n=== Carta cadastrada ===\n");
 
-    printf("Cidade: %s\n", Carta1.Cidade);
+    printf("Estado: %s\n", Carta1.Estado);
+    printf("Código: %s\n", Carta1.Codigo);
+    printf("Nome da cidade: %s\n", Carta1.NomeDaCidade);
     printf("População: %d\n", Carta1.Populacao);
-    printf("Área: %d\n", Carta1.Area);
-    printf("PIB: %f\n", Carta1.PIB);
-    printf("Número de pontos turísticos: %.2f\n", Carta1.NumeroDePontosTuristicos);
+    printf("Área em km²: %d\n", Carta1.AreaEmkm2);
+    printf("PIB em bilhões: %d\n", Carta1.PIBEmBilhoes);
+    printf("Número de pontos turísticos: %d\n", Carta1.NumeroDePontosTuristicos);
+    printf("Densidade Populacional: %f\n", Carta1.DensidadePopulacional);
+    printf("PIB Per Capta: %f\n", Carta1.PIBPerCapta);
+
 
     printf("\n=== Cadastro da segunda carta ===\n");
      
-    printf("Cidade: ");
-    scanf(" %s", Carta2.Cidade);
+    printf("Estado: ");
+    scanf(" %s", Carta2.Estado);
+
+    printf("Código: ");
+    scanf(" %s", Carta2.Codigo);
+
+    printf("Nome da Cidade: ");
+    scanf(" %[^\n]", Carta2.NomeDaCidade);
 
     printf("População: ");
     scanf(" %d", &Carta2.Populacao);
 
-    printf("Área: ");
-    scanf(" %d", &Carta2.Area);
+    printf("Área em km²: ");
+    scanf(" %d", &Carta2.AreaEmkm2);
 
-    printf("PIB: ");
-    scanf(" %f", &Carta2.PIB);
+    printf("PIB em bilhões: ");
+    scanf(" %d", &Carta2.PIBEmBilhoes);
 
     printf("Número de pontos turísticos: ");
-    scanf(" %f", &Carta2.NumeroDePontosTuristicos);
+    scanf(" %d", &Carta2.NumeroDePontosTuristicos);
+
+    printf("Densidade Populacional: ");
+    scanf(" %f", &Carta2.DensidadePopulacional);
+
+    printf("PIB Per Capta: ");
+    scanf(" %f", &Carta2.PIBPerCapta);
 
     printf("\n=== Carta cadastrada ===\n");
 
-    printf("Cidade: %s\n", Carta2.Cidade);
+    printf("Estado: %s\n", Carta2.Estado);
+    printf("Código: %s\n", Carta2.Codigo);
+    printf("Nome da cidade: %s\n", Carta2.NomeDaCidade);
     printf("População: %d\n", Carta2.Populacao);
-    printf("Área: %d\n", Carta2.Area);
-    printf("PIB: %f\n", Carta2.PIB);
-    printf("Número de pontos turísticos: %.2f\n", Carta2.NumeroDePontosTuristicos);
+    printf("Área em km²: %d\n", Carta2.AreaEmkm2);
+    printf("PIB em bilhões: %d\n", Carta2.PIBEmBilhoes);
+    printf("Número de pontos turísticos: %d\n", Carta2.NumeroDePontosTuristicos);
+    printf("Densidade Populacional: %f\n", Carta2.DensidadePopulacional);
+    printf("PIB Per Capta: %f\n", Carta2.PIBPerCapta);
 
     printf("\n === Cartas cadastradas com sucesso === \n");
 
@@ -84,10 +123,11 @@ struct Carta
     %.2f: Imprime um número de ponto flutuante no formato normal.
     %e: Imprime um número de ponto flutuante na notação científica.
     %c: Imprime um único caractere.
-    %s: Imprime uma cadeia (string) de caracteres.*/
+    %s: Imprime uma cadeia (string) de caracteres.
+    %f: no printf para double %lf: no scanf para double*/
 
     /*scanf("formato1, formato2, &variavel1, &variavel2"); (sintaxe scanf)*/
 
     return 0;
 
-};
+}
